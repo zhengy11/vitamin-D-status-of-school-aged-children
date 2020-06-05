@@ -5,7 +5,6 @@
 Stata dofile as follow:
 
 ```Stata
-"""
 * Do-file:   vitaminDlevel.do
 * Project:   MAST90102 Linear Regression project
 *
@@ -29,7 +28,6 @@ use vitaminD.dta, clear
 Generate the descriptive statistics
 
 ```Stata
-"""
 //check the missing data of all variables
 codebook
 describe age female height_age_z bmi_age_z d25
@@ -45,7 +43,6 @@ hist bmi_age_z,normal kdensity
 
 Investigation of model assumptions
 ```Stata
-"""
 ///regress d25 height_age_z female age
 regress d25 height_age_z
 //check the linearity between outcome and continuous covariates
@@ -73,7 +70,6 @@ scatter _dfbeta_1 id, mlabel(id) yline(0) ytitle("Dfbeta height-for-age z-score"
 
 Fit the linear model
 ```Stata
-"""
 gen stunt = 0
 replace stunt = height_age_z + 2 if height_age_z >= -2
 regress d25 height_age_z stunt
@@ -81,7 +77,6 @@ regress d25 height_age_z stunt
 
 Generate the graph of estimated association
 ```Stata
-"""
 predict pred_d250 if stunt == 0
 predict pred_d251 if stunt != 0
 twoway scatter d25 height_age_z if stunt == 0, mcolor("dknavy") || scatter d25 height_age_z if stunt !=0, mcolor("maroon") ///
