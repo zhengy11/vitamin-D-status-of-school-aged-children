@@ -41,6 +41,8 @@ hist age,normal kdensity
 hist bmi_age_z,normal kdensity
 ```
 
+![image](https://user-images.githubusercontent.com/62195810/83822765-9c410200-a697-11ea-97e3-413eade60ebe.png)
+
 Investigation of model assumptions
 ```Stata
 ///regress d25 height_age_z female age
