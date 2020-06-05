@@ -88,3 +88,5 @@ twoway scatter d25 height_age_z if stunt == 0, mcolor("dknavy") || scatter d25 h
 lab(3 "Predicted line") lab(4 "Predicted line")) ///
 ytitle("Serum 25-hydroxyvitamin D (nmol/L)") title("Estimated association") subtitle(" between vitamin D level and height-for-age z-score") xtitle("height-for-age z-score")
 ```
+
+![image](https://user-images.githubusercontent.com/62195810/83822974-3d2fbd00-a698-11ea-8a4f-26d0b03afd30.png)
