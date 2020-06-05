@@ -77,6 +77,8 @@ replace stunt = height_age_z + 2 if height_age_z >= -2
 regress d25 height_age_z stunt
 ```
 
+![image](https://user-images.githubusercontent.com/62195810/83822950-25583900-a698-11ea-80ee-78ad7311b23a.png)
+
 Generate the graph of estimated association
 ```Stata
 predict pred_d250 if stunt == 0
