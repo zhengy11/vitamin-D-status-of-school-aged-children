@@ -10,7 +10,7 @@ Stata dofile as follow:
 *
 * Data used:   "vitaminD.dta"
 * Data created:  none
-* Date:    30 October 2019
+* Date:    30 October 2018
 *
 * Author:    Ying ZHENG
 * Purpose:     To create a do file for Linear Regression vitaminDlevel
@@ -68,7 +68,7 @@ sum _dfbeta_1, detail
 scatter _dfbeta_1 id, mlabel(id) yline(0) ytitle("Dfbeta height-for-age z-score")
 ```
 
-Fit the linear model
+Fit the linear model (hockey stick relationship)
 ```Stata
 gen stunt = 0
 replace stunt = height_age_z + 2 if height_age_z >= -2
